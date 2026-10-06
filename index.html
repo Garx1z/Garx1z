@@ -1,79 +1,107 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta name="google-site-verification" content="bPH07iNdoAIl7KG9bMCJCDdgHg--_7Mx1c04b0peFJo" />
     <meta charset="UTF-8">
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="bPH07iNdoAIl7KG9bMCJCDdgHg--_7Mx1c04b0peFJo" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Garx1z | Official Website</title>
+    <title>Garx1z | Official Website & Biography</title>
 
     <meta
         name="description"
-        content="Official website of Garx1z — Venezuelan artist and music producer. Discover his music, story, projects, official store and latest releases."
+        content="Official website of Garx1z — artist and music producer. Discover his music, story, projects, gallery, official links and store."
     >
 
-    <meta name="theme-color" content="#06070d">
+    <meta name="keywords" content="Garx1z, artist, music producer, Garx1z music, Garx1z official, x1z RECORDS">
+
+    <meta name="author" content="Garx1z">
 
     <!-- Open Graph -->
-    <meta property="og:type" content="profile">
     <meta property="og:title" content="Garx1z | Official Website">
     <meta
         property="og:description"
-        content="Official website of Garx1z — artist, music producer and independent creator."
+        content="Official website of Garx1z — Artist • Music Producer."
     >
+    <meta property="og:type" content="website">
     <meta property="og:image" content="perfil.jpg">
+    <meta property="og:site_name" content="Garx1z">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#06070d">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Garx1z",
+        "alternateName": "Garx1z",
+        "jobTitle": "Artist and Music Producer",
+        "description": "Garx1z is an independent artist and music producer.",
+        "image": "perfil.jpg",
+        "url": "https://garx1z.com/",
+        "sameAs": [
+            "https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw",
+            "https://www.youtube.com/@Garx1z",
+            "https://www.instagram.com/garx1z",
+            "https://soundcloud.com/",
+            "https://linktr.ee/Garx1z",
+            "https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba"
+        ]
+    }
+    </script>
 
     <style>
 
         /* =========================================================
-           ROOT
+           GLOBAL
         ========================================================= */
 
         :root {
             --bg-color: #06070d;
-            --card-bg: rgba(17, 20, 36, 0.78);
-
-            --text-color: #ffffff;
-            --gray-text: #a0a5c0;
+            --bg-secondary: #0a0c14;
+            --card-color: rgba(15, 17, 28, 0.82);
 
             --cyan: #00f2ff;
             --purple: #9d4edd;
+            --pink: #ff2bd6;
 
-            --border: rgba(255, 255, 255, 0.09);
+            --text: #ffffff;
+            --text-secondary: #a7adbd;
+
+            --border: rgba(255,255,255,0.09);
+
+            --radius: 22px;
 
             --shadow:
-                0 20px 50px rgba(0, 0, 0, 0.55);
+                0 20px 60px rgba(0,0,0,0.45);
 
-            --cyan-glow:
-                0 0 30px rgba(0, 242, 255, 0.20);
-
-            --radius: 18px;
+            --glow:
+                0 0 30px rgba(0,242,255,0.15);
         }
 
-
-        /* =========================================================
-           RESET
-        ========================================================= */
-
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         html {
@@ -81,32 +109,50 @@
         }
 
         body {
-            min-height: 100vh;
-
+            font-family: "Inter", sans-serif;
             background:
                 radial-gradient(
                     circle at 10% 10%,
-                    rgba(157, 78, 221, 0.12),
-                    transparent 35%
+                    rgba(0,242,255,0.08),
+                    transparent 30%
                 ),
                 radial-gradient(
-                    circle at 90% 90%,
-                    rgba(0, 242, 255, 0.09),
-                    transparent 35%
+                    circle at 90% 20%,
+                    rgba(157,78,221,0.09),
+                    transparent 30%
                 ),
                 var(--bg-color);
 
-            color: var(--text-color);
-
-            font-family: "Inter", sans-serif;
-
-            line-height: 1.6;
-
+            color: var(--text);
+            min-height: 100vh;
             overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.012) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.012) 1px,
+                    transparent 1px
+                );
+
+            background-size: 50px 50px;
+
+            pointer-events: none;
+            z-index: -1;
         }
 
         a {
             color: inherit;
+            text-decoration: none;
         }
 
         img {
@@ -114,326 +160,418 @@
             display: block;
         }
 
-
-        /* =========================================================
-           BACKGROUND EFFECTS
-        ========================================================= */
-
-        .bg-effects {
-            position: fixed;
-            inset: 0;
-
-            width: 100%;
-            height: 100%;
-
-            overflow: hidden;
-
-            pointer-events: none;
-
-            z-index: -1;
+        section[id] {
+            scroll-margin-top: 110px;
         }
-
-        .orb {
-            position: absolute;
-
-            border-radius: 50%;
-
-            filter: blur(100px);
-
-            opacity: 0.25;
-
-            animation:
-                floatOrb 12s infinite alternate ease-in-out;
-        }
-
-        .orb-1 {
-            width: 380px;
-            height: 380px;
-
-            background: var(--cyan);
-
-            top: -120px;
-            left: -100px;
-        }
-
-        .orb-2 {
-            width: 500px;
-            height: 500px;
-
-            background: var(--purple);
-
-            right: -160px;
-            bottom: -180px;
-
-            animation-delay: -5s;
-        }
-
-        @keyframes floatOrb {
-
-            0% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(50px, 40px) scale(1.08);
-            }
-
-            100% {
-                transform: translate(-30px, 80px) scale(0.95);
-            }
-        }
-
-
-        /* =========================================================
-           MAIN CONTAINER
-        ========================================================= */
 
         .container {
-            width: min(1180px, calc(100% - 32px));
-
-            margin: 0 auto;
-
-            padding: 60px 0 30px;
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
         }
 
 
         /* =========================================================
-           HEADER
+           TOP NAVIGATION
         ========================================================= */
 
-        header {
-            text-align: center;
+        .site-nav {
+            position: sticky;
+            top: 18px;
 
-            margin-bottom: 60px;
+            width: min(1180px, calc(100% - 40px));
+
+            margin: 18px auto 0;
+
+            padding: 14px 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            background: rgba(8,10,18,0.78);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            box-shadow: var(--shadow);
+
+            z-index: 1000;
         }
 
-        .profile-container {
-            display: inline-block;
-
-            margin-bottom: 24px;
-
-            position: relative;
-        }
-
-        .profile-img {
-            width: 175px;
-            height: 175px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border: 3px solid var(--cyan);
-
-            box-shadow: var(--cyan-glow);
-
-            transition:
-                transform 0.4s ease,
-                border-color 0.4s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.04);
-
-            border-color: var(--purple);
-        }
-
-        header h1 {
-            font-size: clamp(3rem, 8vw, 5.8rem);
-
-            line-height: 1;
-
+        .nav-brand {
+            font-size: 1.25rem;
             font-weight: 900;
+            letter-spacing: -0.05em;
 
-            letter-spacing: -3px;
+            white-space: nowrap;
 
             background:
                 linear-gradient(
-                    135deg,
+                    90deg,
                     var(--cyan),
-                    #ffffff 50%,
+                    #ffffff,
                     var(--purple)
                 );
 
             -webkit-background-clip: text;
             background-clip: text;
-
-            -webkit-text-fill-color: transparent;
-
-            margin-bottom: 16px;
+            color: transparent;
         }
 
-        .tagline {
-            color: var(--gray-text);
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
 
-            font-size: 1rem;
-
+        .nav-menu a {
+            color: var(--text-secondary);
+            font-size: 0.84rem;
             font-weight: 600;
 
-            letter-spacing: 4px;
+            transition: 0.25s ease;
+        }
 
-            text-transform: uppercase;
+        .nav-menu a:hover {
+            color: var(--cyan);
+        }
+
+        .nav-socials {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-socials a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            color: var(--text-secondary);
+
+            border: 1px solid transparent;
+
+            transition: 0.25s ease;
+        }
+
+        .nav-socials a:hover {
+            color: white;
+            border-color: rgba(0,242,255,0.25);
+            background: rgba(0,242,255,0.07);
+
+            transform: translateY(-2px);
         }
 
 
         /* =========================================================
-           GENERIC SECTION
+           HERO
         ========================================================= */
 
-        .section {
-            margin-bottom: 55px;
-        }
+        .hero {
+            min-height: 650px;
 
-        .section-title {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+
             align-items: center;
 
-            gap: 12px;
+            gap: 70px;
 
-            margin-bottom: 22px;
+            padding: 90px 0 70px;
+        }
 
-            padding-left: 14px;
+        .hero-content {
+            max-width: 650px;
+        }
 
-            border-left: 4px solid var(--purple);
+        .hero-label {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 13px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid rgba(0,242,255,0.2);
+
+            border-radius: 999px;
 
             color: var(--cyan);
 
-            font-size: 1.35rem;
+            background: rgba(0,242,255,0.05);
 
-            letter-spacing: 1.5px;
+            font-size: 0.75rem;
+            font-weight: 700;
 
+            letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
-        .section-title i {
+        .hero h1 {
+            font-size: clamp(4rem, 10vw, 8rem);
+
+            line-height: 0.85;
+
+            letter-spacing: -0.09em;
+
+            margin-bottom: 25px;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    var(--cyan) 48%,
+                    var(--purple) 90%
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .hero-role {
+            font-size: 1.25rem;
+            font-weight: 700;
+
+            margin-bottom: 18px;
+
+            color: white;
+        }
+
+        .hero-role span {
+            color: var(--cyan);
+        }
+
+        .hero-description {
+            color: var(--text-secondary);
+
             font-size: 1rem;
+
+            line-height: 1.8;
+
+            max-width: 600px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 13px 19px;
+
+            border-radius: 12px;
+
+            font-size: 0.85rem;
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: #001014;
+
+            box-shadow:
+                0 0 25px rgba(0,242,255,0.18);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 35px rgba(0,242,255,0.3);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--border);
+
+            background: rgba(255,255,255,0.03);
+
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.07);
+            transform: translateY(-3px);
         }
 
 
         /* =========================================================
-           BIOGRAPHY / STORY
+           PROFILE IMAGE
         ========================================================= */
 
-        .story-layout {
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-frame {
+            width: min(420px, 90vw);
+            aspect-ratio: 1;
+
+            padding: 8px;
+
+            border-radius: 34px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--cyan),
+                    var(--purple),
+                    var(--pink)
+                );
+
+            box-shadow:
+                0 0 70px rgba(0,242,255,0.14);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 27px;
+
+            background: #0a0c13;
+        }
+
+
+        /* =========================================================
+           SECTION HEADERS
+        ========================================================= */
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            margin-bottom: 35px;
+        }
+
+        .section-kicker {
+            color: var(--cyan);
+
+            font-size: 0.72rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.15em;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+
+            letter-spacing: -0.05em;
+
+            line-height: 1;
+        }
+
+        .section-description {
+            color: var(--text-secondary);
+
+            line-height: 1.7;
+
+            margin-top: 14px;
+
+            max-width: 700px;
+        }
+
+
+        /* =========================================================
+           STORY
+        ========================================================= */
+
+        .story-grid {
             display: grid;
 
             grid-template-columns:
-                minmax(0, 1fr)
-                310px;
+                minmax(0, 1.7fr)
+                minmax(280px, 0.8fr);
 
             gap: 25px;
 
             align-items: start;
         }
 
-        .glass-card {
-            background: var(--card-bg);
+        .card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.045),
+                    rgba(255,255,255,0.018)
+                );
 
             border: 1px solid var(--border);
 
             border-radius: var(--radius);
 
-            padding: 32px;
+            padding: 30px;
 
             box-shadow: var(--shadow);
 
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
-        .story h3 {
-            color: var(--cyan);
+        .story-card p {
+            color: #c5cad6;
 
-            font-size: 1.05rem;
+            line-height: 1.9;
 
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
-
-            margin-top: 28px;
-            margin-bottom: 10px;
-
-            padding-bottom: 7px;
-
-            border-bottom:
-                1px solid
-                rgba(0, 242, 255, 0.18);
+            margin-bottom: 20px;
         }
 
-        .story h3:first-child {
-            margin-top: 0;
+        .story-card p:last-child {
+            margin-bottom: 0;
         }
 
-        .story p {
-            color: #e3e5ef;
-
-            font-size: 0.98rem;
-
-            line-height: 1.8;
-
-            margin-bottom: 15px;
+        .story-card strong {
+            color: white;
         }
 
-        .story strong {
-            color: #ffffff;
-        }
-
-
-        /* =========================================================
-           QUICK FACTS
-        ========================================================= */
-
-        .quick-facts {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(157, 78, 221, 0.13),
-                    rgba(0, 242, 255, 0.06)
-                );
-
-            border: 1px solid rgba(157, 78, 221, 0.45);
-
-            border-radius: var(--radius);
-
-            padding: 25px;
-
-            box-shadow:
-                0 15px 40px rgba(0, 0, 0, 0.45);
-
+        .facts {
             position: sticky;
-            top: 25px;
+            top: 110px;
         }
 
-        .quick-facts-title {
-            text-align: center;
+        .facts h3 {
+            margin-bottom: 22px;
 
-            font-weight: 900;
-
-            font-size: 1.25rem;
-
-            text-transform: uppercase;
-
-            padding-bottom: 14px;
-
-            margin-bottom: 8px;
-
-            border-bottom:
-                2px solid
-                var(--cyan);
+            font-size: 1.1rem;
         }
 
         .fact {
-            display: flex;
+            padding: 15px 0;
 
-            justify-content: space-between;
-
-            gap: 15px;
-
-            padding: 12px 0;
-
-            border-bottom:
-                1px solid
-                rgba(255,255,255,0.07);
+            border-bottom: 1px solid rgba(255,255,255,0.07);
         }
 
         .fact:last-child {
@@ -441,177 +579,194 @@
         }
 
         .fact-label {
-            color: var(--gray-text);
+            display: block;
 
-            font-size: 0.8rem;
+            color: #777f91;
 
-            font-weight: 600;
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.1em;
+
+            margin-bottom: 5px;
         }
 
         .fact-value {
-            color: #ffffff;
+            color: white;
 
-            font-size: 0.85rem;
+            font-size: 0.88rem;
 
             font-weight: 600;
-
-            text-align: right;
-        }
-
-        .fact-value a {
-            color: var(--cyan);
-
-            text-decoration: none;
-        }
-
-        .fact-value a:hover {
-            text-decoration: underline;
         }
 
 
         /* =========================================================
-           SPOTIFY
+           MUSIC
         ========================================================= */
+
+        .music-layout {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.5fr)
+                minmax(260px, 0.7fr);
+
+            gap: 25px;
+
+            align-items: start;
+        }
 
         .spotify-card {
             overflow: hidden;
 
-            background: #090b12;
+            padding: 0;
+
+            min-height: 450px;
+        }
+
+        .spotify-header {
+            padding: 25px 25px 0;
+        }
+
+        .spotify-header h3 {
+            margin-bottom: 7px;
+        }
+
+        .spotify-header p {
+            color: var(--text-secondary);
+
+            font-size: 0.85rem;
+        }
+
+        .spotify-frame {
+            width: 100%;
+
+            height: 420px;
+
+            border: 0;
+
+            margin-top: 20px;
+        }
+
+        .music-side h3 {
+            margin-bottom: 12px;
+        }
+
+        .music-side p {
+            color: var(--text-secondary);
+
+            line-height: 1.75;
+
+            font-size: 0.9rem;
+
+            margin-bottom: 20px;
+        }
+
+        .genre-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .genre {
+            padding: 8px 11px;
+
+            border-radius: 999px;
+
+            background: rgba(0,242,255,0.06);
+
+            border: 1px solid rgba(0,242,255,0.12);
+
+            color: #cceff2;
+
+            font-size: 0.72rem;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           STORE
+        ========================================================= */
+
+        .store-banner {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 45px;
 
             border-radius: var(--radius);
 
             border: 1px solid var(--border);
 
+            background:
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(157,78,221,0.35),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(0,242,255,0.18),
+                    transparent 40%
+                ),
+                #0b0d17;
+
             box-shadow: var(--shadow);
         }
 
-        .spotify-card iframe {
-            display: block;
-
-            width: 100%;
-
-            min-height: 352px;
-
-            border: 0;
+        .store-content {
+            max-width: 650px;
         }
 
+        .store-content h3 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
 
-        /* =========================================================
-           MERCH
-        ========================================================= */
+            letter-spacing: -0.06em;
 
-        .merch-banner {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 30px;
-
-            padding: 30px;
-
-            margin-bottom: 55px;
-
-            border-radius: var(--radius);
-
-            border: 1px solid rgba(0, 242, 255, 0.35);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(157, 78, 221, 0.16),
-                    rgba(0, 242, 255, 0.07)
-                );
-
-            box-shadow:
-                0 15px 40px
-                rgba(0, 0, 0, 0.35);
+            margin-bottom: 12px;
         }
 
-        .badge {
+        .store-content p {
+            color: var(--text-secondary);
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+        .store-badge {
             display: inline-block;
 
-            background: var(--purple);
+            margin-bottom: 12px;
 
-            color: white;
+            color: var(--cyan);
 
-            padding: 5px 11px;
-
-            border-radius: 6px;
-
-            font-size: 0.7rem;
+            font-size: 0.72rem;
 
             font-weight: 800;
 
-            letter-spacing: 1px;
-
             text-transform: uppercase;
 
-            margin-bottom: 10px;
-        }
-
-        .merch-info h3 {
-            font-size: 1.35rem;
-
-            margin-bottom: 6px;
-        }
-
-        .merch-info p {
-            color: var(--gray-text);
-
-            font-size: 0.9rem;
-        }
-
-        .shop-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 9px;
-
-            padding: 13px 23px;
-
-            border-radius: 9px;
-
-            background: var(--cyan);
-
-            color: #000;
-
-            font-size: 0.85rem;
-
-            font-weight: 800;
-
-            text-decoration: none;
-
-            text-transform: uppercase;
-
-            white-space: nowrap;
-
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
-        }
-
-        .shop-button:hover {
-            background: #ffffff;
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 10px 25px
-                rgba(0, 242, 255, 0.3);
+            letter-spacing: 0.14em;
         }
 
 
         /* =========================================================
-           PHOTO GALLERY
+           GALLERY
         ========================================================= */
 
-        .gallery-grid {
+        .gallery {
             display: grid;
 
             grid-template-columns:
@@ -620,69 +775,45 @@
             gap: 18px;
         }
 
-        .photo-card {
-            position: relative;
-
+        .gallery-item {
             overflow: hidden;
 
-            border-radius: 15px;
+            border-radius: 18px;
 
             border: 1px solid var(--border);
 
-            background: var(--card-bg);
+            background: #0b0d14;
 
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 4 / 5;
+
+            box-shadow: var(--shadow);
         }
 
-        .photo-card img {
+        .gallery-item img {
             width: 100%;
             height: 100%;
 
             object-fit: cover;
 
-            transition:
-                transform 0.5s ease,
-                filter 0.5s ease;
+            transition: transform 0.5s ease;
         }
 
-        .photo-card:hover img {
+        .gallery-item:hover img {
             transform: scale(1.05);
-
-            filter: brightness(1.08);
-        }
-
-        .photo-label {
-            position: absolute;
-
-            left: 0;
-            right: 0;
-            bottom: 0;
-
-            padding: 25px 15px 14px;
-
-            background:
-                linear-gradient(
-                    transparent,
-                    rgba(0,0,0,0.8)
-                );
-
-            font-size: 0.8rem;
-
-            font-weight: 600;
         }
 
 
         /* =========================================================
-           SOCIAL / PLATFORMS
+           LINKS
         ========================================================= */
 
         .links-grid {
             display: grid;
 
             grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+                repeat(4, minmax(0, 1fr));
 
-            gap: 14px;
+            gap: 12px;
         }
 
         .platform-link {
@@ -690,57 +821,43 @@
 
             align-items: center;
 
-            justify-content: center;
+            gap: 12px;
 
-            gap: 10px;
-
-            min-height: 58px;
-
-            padding: 14px;
-
-            border-radius: 11px;
+            padding: 16px;
 
             border: 1px solid var(--border);
 
-            background: var(--card-bg);
+            border-radius: 14px;
 
-            color: white;
+            background: rgba(255,255,255,0.025);
 
-            text-decoration: none;
+            color: var(--text-secondary);
 
-            font-weight: 600;
-
-            transition:
-                transform 0.25s ease,
-                background 0.25s ease,
-                border-color 0.25s ease;
+            transition: 0.25s ease;
         }
 
         .platform-link i {
+            width: 22px;
+
+            text-align: center;
+
             color: var(--cyan);
+        }
 
-            font-size: 1.15rem;
+        .platform-link span {
+            font-size: 0.82rem;
 
-            transition: color 0.25s ease;
+            font-weight: 700;
+
+            color: white;
         }
 
         .platform-link:hover {
             transform: translateY(-3px);
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(0, 242, 255, 0.9),
-                    rgba(157, 78, 221, 0.9)
-                );
+            background: rgba(255,255,255,0.055);
 
-            border-color: transparent;
-
-            color: #000;
-        }
-
-        .platform-link:hover i {
-            color: #000;
+            border-color: rgba(0,242,255,0.25);
         }
 
 
@@ -749,471 +866,796 @@
         ========================================================= */
 
         footer {
-            margin-top: 70px;
+            padding: 60px 0 35px;
 
-            padding-top: 25px;
+            border-top: 1px solid var(--border);
 
-            border-top:
-                1px solid
-                var(--border);
-
-            text-align: center;
-
-            color: var(--gray-text);
-
-            font-size: 0.8rem;
+            margin-top: 40px;
         }
 
-        footer strong {
-            color: #ffffff;
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-size: 1.2rem;
+
+            font-weight: 900;
+        }
+
+        .footer-brand span {
+            color: var(--cyan);
+        }
+
+        .footer-text {
+            color: #73798a;
+
+            font-size: 0.78rem;
+        }
+
+        .footer-socials {
+            display: flex;
+
+            gap: 8px;
+        }
+
+        .footer-socials a {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            color: #8c92a3;
+
+            border: 1px solid var(--border);
+
+            transition: 0.25s ease;
+        }
+
+        .footer-socials a:hover {
+            color: white;
+
+            border-color: var(--cyan);
+
+            transform: translateY(-2px);
         }
 
 
         /* =========================================================
-           TABLET
+           RESPONSIVE
         ========================================================= */
 
-        @media (max-width: 850px) {
+        @media (max-width: 950px) {
 
-            .story-layout {
+            .hero {
                 grid-template-columns: 1fr;
-            }
-
-            .quick-facts {
-                position: static;
-            }
-
-            .gallery-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
-
-            .links-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
-        }
-
-
-        /* =========================================================
-           MOBILE
-        ========================================================= */
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: min(100% - 22px, 1180px);
-
-                padding-top: 35px;
-            }
-
-            header {
-                margin-bottom: 45px;
-            }
-
-            .profile-img {
-                width: 145px;
-                height: 145px;
-            }
-
-            header h1 {
-                letter-spacing: -2px;
-            }
-
-            .tagline {
-                font-size: 0.75rem;
-
-                letter-spacing: 2px;
-
-                line-height: 1.7;
-            }
-
-            .glass-card {
-                padding: 22px;
-            }
-
-            .merch-banner {
-                flex-direction: column;
 
                 text-align: center;
 
-                padding: 25px 20px;
+                gap: 40px;
             }
 
-            .shop-button {
-                width: 100%;
+            .hero-content {
+                margin: auto;
             }
 
-            .gallery-grid {
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .story-grid,
+            .music-layout {
                 grid-template-columns: 1fr;
+            }
+
+            .facts {
+                position: static;
+            }
+
+            .links-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+        }
+
+
+        @media (max-width: 720px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .site-nav {
+                width: calc(100% - 28px);
+
+                padding: 11px 12px;
+
+                top: 10px;
+
+                border-radius: 15px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-socials {
+                margin-left: auto;
+            }
+
+            .nav-socials a {
+                width: 33px;
+                height: 33px;
+            }
+
+            .nav-socials a:nth-child(3),
+            .nav-socials a:nth-child(4) {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+
+                padding: 70px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: clamp(4rem, 21vw, 6rem);
+            }
+
+            .hero-role {
+                font-size: 1.05rem;
+            }
+
+            .hero-description {
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .store-banner {
+                padding: 30px 24px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                aspect-ratio: 16 / 11;
             }
 
             .links-grid {
                 grid-template-columns: 1fr;
             }
 
-            .spotify-card iframe {
-                min-height: 300px;
+            .spotify-frame {
+                height: 400px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+        }
+
+
+        @media (max-width: 430px) {
+
+            .nav-brand {
+                font-size: 1.05rem;
+            }
+
+            .nav-socials a {
+                width: 30px;
+                height: 30px;
+            }
+
+            .hero h1 {
+                font-size: 4.2rem;
+            }
+
+            .profile-frame {
+                border-radius: 25px;
+            }
+
+            .profile-frame img {
+                border-radius: 19px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
             }
         }
 
     </style>
-
-
-    <!-- =========================================================
-         STRUCTURED DATA
-    ========================================================= -->
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-
-        "name": "Edward Josue Garcia Alcas",
-
-        "alternateName": [
-            "Garx1z",
-            "Edward Garcia"
-        ],
-
-        "url": "https://garx1z.com",
-
-        "image": "perfil.jpg",
-
-        "birthDate": "2008-09-18",
-
-        "birthPlace": {
-            "@type": "Place",
-            "name": "Coro, Falcon, Venezuela"
-        },
-
-        "jobTitle": [
-            "Artist",
-            "Music Producer"
-        ],
-
-        "knowsAbout": [
-            "Music Production",
-            "Phonk",
-            "Rap",
-            "Lofi",
-            "Urban Music",
-            "Video Game Development"
-        ],
-
-        "founder": {
-            "@type": "Organization",
-            "name": "x1z RECORDS"
-        },
-
-        "sameAs": [
-            "https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw",
-            "https://music.apple.com/mx/artist/garx1z/1896411973",
-            "https://soundcloud.com/garx1z",
-            "https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba",
-            "https://genius.com/artists/Garx1z",
-            "https://instagram.com/garx1z",
-            "https://facebook.com/Garx1z",
-            "https://www.youtube.com/@Garx1z",
-            "https://garx1zstore.myshopify.com"
-        ]
-    }
-    </script>
-
 </head>
 
 
 <body>
 
 
-    <!-- BACKGROUND -->
-    <div class="bg-effects">
+    <!-- =========================================================
+         TOP NAVIGATION
+    ========================================================= -->
 
-        <div class="orb orb-1"></div>
+    <nav class="site-nav">
 
-        <div class="orb orb-2"></div>
+        <a href="#top" class="nav-brand">
+            Garx1z
+        </a>
 
-    </div>
+        <div class="nav-menu">
+
+            <a href="#story">
+                Story
+            </a>
+
+            <a href="#music">
+                Music
+            </a>
+
+            <a href="#gallery">
+                Gallery
+            </a>
+
+            <a href="#store">
+                Store
+            </a>
+
+        </div>
+
+        <div class="nav-socials">
+
+            <a
+                href="https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Spotify"
+            >
+                <i class="fa-brands fa-spotify"></i>
+            </a>
+
+            <a
+                href="https://www.youtube.com/@Garx1z"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+            >
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a
+                href="https://www.instagram.com/garx1z"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+                href="https://soundcloud.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SoundCloud"
+            >
+                <i class="fa-brands fa-soundcloud"></i>
+            </a>
+
+        </div>
+
+    </nav>
 
 
-    <main class="container">
+    <main id="top">
 
 
         <!-- =====================================================
              HERO
         ====================================================== -->
 
-        <header>
+        <header class="container hero">
 
-            <div class="profile-container">
+            <div class="hero-content">
 
-                <img
-                    src="perfil.jpg"
-                    alt="Garx1z official artist portrait"
-                    class="profile-img"
-                    onerror="this.src='https://via.placeholder.com/175/111424/00f2ff?text=Garx1z'"
-                >
+                <div class="hero-label">
+                    <i class="fa-solid fa-circle"></i>
+                    Official Artist Website
+                </div>
+
+                <h1>
+                    Garx1z
+                </h1>
+
+                <div class="hero-role">
+                    Artist <span>•</span> Music Producer
+                </div>
+
+                <p class="hero-description">
+                    Independent artist and music producer building a
+                    distinctive sound through hip-hop, trap, phonk,
+                    rap, lo-fi and alternative influences.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#music"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-brands fa-spotify"></i>
+                        Listen to Garx1z
+                    </a>
+
+                    <a
+                        href="#story"
+                        class="btn btn-secondary"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                        Discover My Story
+                    </a>
+
+                </div>
 
             </div>
 
-            <h1>Garx1z</h1>
 
-            <p class="tagline">
-                Artist • Music Producer
-            </p>
+            <div class="hero-image">
+
+                <div class="profile-frame">
+
+                    <img
+                        src="perfil.jpg"
+                        alt="Garx1z official artist portrait"
+                    >
+
+                </div>
+
+            </div>
 
         </header>
 
 
 
         <!-- =====================================================
-             OFFICIAL STORY
+             STORY
         ====================================================== -->
 
-        <section class="section">
+        <section
+            id="story"
+            class="section"
+        >
 
-            <h2 class="section-title">
-                <i class="fas fa-book-open"></i>
-                Official Story
-            </h2>
+            <div class="container">
 
+                <div class="section-header">
 
-            <div class="story-layout">
-
-
-                <!-- LONG BIOGRAPHY -->
-
-                <article class="glass-card story">
-
-                    <h3>Early Life & Origins</h3>
-
-                    <p>
-                        <strong>Edward Josue Garcia Alcas</strong>,
-                        professionally known as
-                        <strong>Garx1z</strong>, was born on
-                        September 18, 2008, in Coro, Falcon, Venezuela.
-                        From an early age, he developed a strong interest
-                        in technology, digital creation and music.
-                    </p>
-
-                    <p>
-                        His creative interests eventually expanded into
-                        music production, digital projects and interactive
-                        experiences, allowing him to build a multidisciplinary
-                        creative identity around the Garx1z name.
-                    </p>
-
-
-                    <h3>Beginning of His Music Career</h3>
-
-                    <p>
-                        Garx1z officially began his musical journey at
-                        the age of 17 in 2025. During this period, he
-                        started creating and experimenting with his own
-                        music, developing his sound independently and
-                        learning through each release.
-                    </p>
-
-                    <p>
-                        One of his earliest projects was
-                        <em>DenimSeals</em>, a project that became an
-                        important part of the beginning of his artistic
-                        identity. His music was later distributed through
-                        major streaming platforms, allowing his work to
-                        reach listeners internationally.
-                    </p>
-
-
-                    <h3>Music & Creative Direction</h3>
-
-                    <p>
-                        Throughout his development as an artist,
-                        Garx1z has experimented with different sounds
-                        and styles, including Phonk, Rap, Lofi and
-                        alternative urban music.
-                    </p>
-
-                    <p>
-                        His catalog reflects an independent approach to
-                        music creation, combining vocal experimentation,
-                        production, digital aesthetics and influences
-                        from different cultures and online music scenes.
-                    </p>
-
-
-                    <h3>x1z RECORDS</h3>
-
-                    <p>
-                        As his artistic project developed, Garx1z created
-                        <strong>x1z RECORDS</strong>, an independent
-                        creative identity intended to give him greater
-                        control over his music and future projects.
-                    </p>
-
-
-                    <h3>Video Game Development & Digital Projects</h3>
-
-                    <p>
-                        Beyond music, Garx1z has also explored
-                        programming and video game development.
-                        His creative projects have included
-                        <em>CHAOS RAIN</em> on Roblox and
-                        <em>DenimSeals RolePlay</em>, a concept developed
-                        for the GTA San Andreas Multiplayer community.
-                    </p>
-
-                    <p>
-                        These projects represent another side of his
-                        creative work and demonstrate his interest in
-                        technology, digital worlds and interactive
-                        experiences.
-                    </p>
-
-
-                    <h3>Garx1z Store & Future Projects</h3>
-
-                    <p>
-                        Garx1z is also developing an official merchandise
-                        presence through the <strong>Garx1z Store</strong>,
-                        with plans centered around clothing, streetwear,
-                        collectibles and products connected to his
-                        artistic identity.
-                    </p>
-
-                    <p>
-                        His long-term vision is to continue developing
-                        Garx1z as an independent artist brand, expanding
-                        his music catalog, visual identity, digital
-                        projects and connection with listeners around
-                        the world.
-                    </p>
-
-                </article>
-
-
-
-                <!-- QUICK FACTS -->
-
-                <aside class="quick-facts">
-
-                    <div class="quick-facts-title">
-                        Garx1z
+                    <div class="section-kicker">
+                        About
                     </div>
 
+                    <h2 class="section-title">
+                        Official Story
+                    </h2>
 
-                    <div class="fact">
+                    <p class="section-description">
+                        The story, music and creative world behind Garx1z.
+                    </p>
 
-                        <span class="fact-label">
-                            Real Name
-                        </span>
-
-                        <span class="fact-value">
-                            Edward Josue Garcia Alcas
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="fact">
-
-                        <span class="fact-label">
-                            Born
-                        </span>
-
-                        <span class="fact-value">
-                            September 18, 2008
-                        </span>
-
-                    </div>
+                <div class="story-grid">
 
 
-                    <div class="fact">
+                    <article class="card story-card">
 
-                        <span class="fact-label">
-                            Birthplace
-                        </span>
+                        <p>
+                            <strong>Garx1z</strong> is an independent
+                            artist and music producer developing a
+                            personal identity through music, visual
+                            aesthetics and digital creativity.
+                        </p>
 
-                        <span class="fact-value">
-                            Coro, Falcon, Venezuela
-                        </span>
+                        <p>
+                            His creative journey began with a strong
+                            interest in music production and digital
+                            culture. Over time, that interest evolved
+                            into an independent musical project focused
+                            on experimentation and creating a recognizable
+                            sound.
+                        </p>
 
-                    </div>
+                        <p>
+                            Garx1z began releasing music independently
+                            in <strong>2025</strong>, exploring different
+                            sounds and influences while developing his
+                            own artistic direction.
+                        </p>
+
+                        <p>
+                            His early releases were influenced by
+                            <strong>Phonk, Rap, Lofi, Trap and Urban
+                            music</strong>, while his creative direction
+                            also incorporates elements inspired by
+                            Japanese and Brazilian culture and modern
+                            internet aesthetics.
+                        </p>
+
+                        <p>
+                            His first single,
+                            <strong>"DenimSeals"</strong>, marked an
+                            important beginning for the project and
+                            helped establish the identity that would
+                            continue developing through later releases.
+                        </p>
+
+                        <p>
+                            Beyond music, Garx1z has also explored
+                            digital creation and game development.
+                            These projects form part of his broader
+                            creative history and include ideas and
+                            projects connected to platforms such as
+                            <strong>Roblox</strong> and
+                            <strong>GTA San Andreas Multiplayer
+                            (SA-MP)</strong>.
+                        </p>
+
+                        <p>
+                            Among these projects are
+                            <strong>CHAOS RAIN</strong> and
+                            <strong>DenimSeals RolePlay</strong>,
+                            which reflect his interest in building
+                            digital worlds and communities alongside
+                            his music.
+                        </p>
+
+                        <p>
+                            Garx1z is also building
+                            <strong>x1z RECORDS</strong> as part of
+                            his independent creative identity, with
+                            the long-term goal of expanding his music,
+                            visual branding, merchandise and digital
+                            projects.
+                        </p>
+
+                        <p>
+                            The project continues to evolve through new
+                            releases, collaborations, visual concepts
+                            and experiments with different sounds.
+                            The objective is to build a recognizable
+                            international artist identity while
+                            remaining independent and creatively
+                            flexible.
+                        </p>
+
+                    </article>
 
 
-                    <div class="fact">
 
-                        <span class="fact-label">
-                            Nationality
-                        </span>
+                    <!-- QUICK FACTS -->
 
-                        <span class="fact-value">
-                            Venezuelan
-                        </span>
+                    <aside class="card facts">
 
-                    </div>
+                        <h3>
+                            Quick Facts
+                        </h3>
 
 
-                    <div class="fact">
+                        <div class="fact">
 
-                        <span class="fact-label">
-                            Profession
-                        </span>
+                            <span class="fact-label">
+                                Artist
+                            </span>
 
-                        <span class="fact-value">
-                            Artist<br>
-                            Music Producer
-                        </span>
+                            <span class="fact-value">
+                                Garx1z
+                            </span>
 
-                    </div>
-
-
-                    <div class="fact">
-
-                        <span class="fact-label">
-                            Active
-                        </span>
-
-                        <span class="fact-value">
-                            2025 – Present
-                        </span>
-
-                    </div>
+                        </div>
 
 
-                    <div class="fact">
+                        <div class="fact">
 
-                        <span class="fact-label">
-                            Label
-                        </span>
+                            <span class="fact-label">
+                                Role
+                            </span>
 
-                        <span class="fact-value">
-                            x1z RECORDS
-                        </span>
+                            <span class="fact-value">
+                                Artist • Music Producer
+                            </span>
 
-                    </div>
+                        </div>
 
 
-                    <div class="fact">
+                        <div class="fact">
 
-                        <span class="fact-label">
-                            Official Store
-                        </span>
+                            <span class="fact-label">
+                                Active Since
+                            </span>
 
-                        <span class="fact-value">
+                            <span class="fact-value">
+                                2025
+                            </span>
 
-                            <a
-                                href="https://garx1zstore.myshopify.com"
-                                target="_blank"
-                                rel="noopener"
-                            >
+                        </div>
+
+
+                        <div class="fact">
+
+                            <span class="fact-label">
+                                First Single
+                            </span>
+
+                            <span class="fact-value">
+                                DenimSeals
+                            </span>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <span class="fact-label">
+                                Genres
+                            </span>
+
+                            <span class="fact-value">
+                                Phonk • Rap • Lofi • Trap
+                            </span>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <span class="fact-label">
+                                Creative Label
+                            </span>
+
+                            <span class="fact-value">
+                                x1z RECORDS
+                            </span>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <span class="fact-label">
+                                Projects
+                            </span>
+
+                            <span class="fact-value">
+                                Music • Digital Projects
+                            </span>
+
+                        </div>
+
+
+                        <div class="fact">
+
+                            <span class="fact-label">
+                                Store
+                            </span>
+
+                            <span class="fact-value">
                                 Garx1z Store
-                            </a>
+                            </span>
 
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             MUSIC
+        ====================================================== -->
+
+        <section
+            id="music"
+            class="section"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        Music
+                    </div>
+
+                    <h2 class="section-title">
+                        Listen to Garx1z
+                    </h2>
+
+                    <p class="section-description">
+                        Explore Garx1z's music and latest releases
+                        through the official Spotify artist profile.
+                    </p>
+
+                </div>
+
+
+                <div class="music-layout">
+
+
+                    <div class="card spotify-card">
+
+                        <div class="spotify-header">
+
+                            <h3>
+                                Official Spotify
+                            </h3>
+
+                            <p>
+                                Follow Garx1z and discover the latest music.
+                            </p>
+
+                        </div>
+
+
+                        <iframe
+                            class="spotify-frame"
+                            src="https://open.spotify.com/embed/artist/5Oscnu6qr6X3K7zpEg9Faw?utm_source=generator&theme=0"
+                            loading="lazy"
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+
+                    <aside class="card music-side">
+
+                        <h3>
+                            The Sound
+                        </h3>
+
+                        <p>
+                            Garx1z's music moves between different
+                            underground and alternative sounds,
+                            combining rhythmic elements with
+                            atmospheric and internet-inspired
+                            aesthetics.
+                        </p>
+
+                        <div class="genre-list">
+
+                            <span class="genre">
+                                Phonk
+                            </span>
+
+                            <span class="genre">
+                                Rap
+                            </span>
+
+                            <span class="genre">
+                                Trap
+                            </span>
+
+                            <span class="genre">
+                                Lofi
+                            </span>
+
+                            <span class="genre">
+                                Alternative
+                            </span>
+
+                            <span class="genre">
+                                Urban
+                            </span>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             STORE
+        ====================================================== -->
+
+        <section
+            id="store"
+            class="section"
+        >
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        Official Store
+                    </div>
+
+                    <h2 class="section-title">
+                        Garx1z Store
+                    </h2>
+
+                    <p class="section-description">
+                        Official merchandise and products connected
+                        to the Garx1z brand.
+                    </p>
+
+                </div>
+
+
+                <div class="store-banner">
+
+                    <div class="store-content">
+
+                        <span class="store-badge">
+                            Official Garx1z Merchandise
                         </span>
 
+                        <h3>
+                            Wear the sound.
+                        </h3>
+
+                        <p>
+                            Discover official Garx1z merchandise,
+                            clothing and future products inspired
+                            by the music and visual identity of
+                            the project.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="btn btn-primary"
+                            onclick="alert('Official store coming soon.'); return false;"
+                        >
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            Visit Store
+                        </a>
+
                     </div>
 
-                </aside>
+                </div>
 
             </div>
 
@@ -1222,141 +1664,71 @@
 
 
         <!-- =====================================================
-             SPOTIFY
+             GALLERY
         ====================================================== -->
 
-        <section class="section">
+        <section
+            id="gallery"
+            class="section"
+        >
 
-            <h2 class="section-title">
+            <div class="container">
 
-                <i class="fab fa-spotify"></i>
+                <div class="section-header">
 
-                Listen to Garx1z
-
-            </h2>
-
-
-            <div class="spotify-card">
-
-                <iframe
-                    src="https://open.spotify.com/embed/artist/5Oscnu6qr6X3K7zpEg9Faw?utm_source=generator&theme=0"
-                    height="352"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"
-                    title="Garx1z Spotify Artist Profile"
-                >
-                </iframe>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             OFFICIAL MERCH
-        ====================================================== -->
-
-        <section class="merch-banner">
-
-            <div class="merch-info">
-
-                <span class="badge">
-                    Official Store
-                </span>
-
-                <h3>
-                    Garx1z Official Merchandise
-                </h3>
-
-                <p>
-                    Explore official clothing, streetwear and
-                    exclusive products inspired by the Garx1z
-                    artistic universe.
-                </p>
-
-            </div>
-
-
-            <a
-                href="https://garx1zstore.myshopify.com"
-                target="_blank"
-                rel="noopener"
-                class="shop-button"
-            >
-
-                <i class="fas fa-shopping-bag"></i>
-
-                Visit Store
-
-            </a>
-
-        </section>
-
-
-
-        <!-- =====================================================
-             ARTIST GALLERY
-        ====================================================== -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-
-                <i class="fas fa-camera"></i>
-
-                Artist Gallery
-
-            </h2>
-
-
-            <div class="gallery-grid">
-
-
-                <div class="photo-card">
-
-                    <img
-                        src="foto1.jpg"
-                        alt="Garx1z artist photo"
-                        onerror="this.src='https://via.placeholder.com/600/111424/00f2ff?text=Garx1z+Photo+1'"
-                    >
-
-                    <div class="photo-label">
-                        Garx1z
+                    <div class="section-kicker">
+                        Visuals
                     </div>
+
+                    <h2 class="section-title">
+                        Artist Gallery
+                    </h2>
+
+                    <p class="section-description">
+                        Official photos and visual material from
+                        the Garx1z project.
+                    </p>
 
                 </div>
 
 
-                <div class="photo-card">
+                <div class="gallery">
 
-                    <img
-                        src="foto2.jpg"
-                        alt="Garx1z portrait"
-                        onerror="this.src='https://via.placeholder.com/600/111424/9d4edd?text=Garx1z+Photo+2'"
-                    >
 
-                    <div class="photo-label">
-                        Artist Portrait
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto1.jpg"
+                            alt="Garx1z official photo 1"
+                            loading="lazy"
+                        >
+
                     </div>
 
-                </div>
 
+                    <div class="gallery-item">
 
-                <div class="photo-card">
+                        <img
+                            src="foto2.jpg"
+                            alt="Garx1z official photo 2"
+                            loading="lazy"
+                        >
 
-                    <img
-                        src="foto3.jpg"
-                        alt="Garx1z creative photo"
-                        onerror="this.src='https://via.placeholder.com/600/111424/00f2ff?text=Garx1z+Photo+3'"
-                    >
-
-                    <div class="photo-label">
-                        Official Gallery
                     </div>
 
-                </div>
 
+                    <div class="gallery-item">
+
+                        <img
+                            src="foto3.jpg"
+                            alt="Garx1z official photo 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                </div>
 
             </div>
 
@@ -1368,155 +1740,275 @@
              OFFICIAL LINKS
         ====================================================== -->
 
-        <section class="section">
+        <section
+            class="section"
+            id="links"
+        >
 
-            <h2 class="section-title">
+            <div class="container">
 
-                <i class="fas fa-globe"></i>
+                <div class="section-header">
 
-                Official Links
+                    <div class="section-kicker">
+                        Connect
+                    </div>
 
-            </h2>
+                    <h2 class="section-title">
+                        Official Links
+                    </h2>
 
+                    <p class="section-description">
+                        Follow Garx1z across music platforms,
+                        social networks and artist databases.
+                    </p>
 
-            <div class="links-grid">
-
-
-                <a
-                    href="https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-spotify"></i>
-                    Spotify
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@Garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-youtube"></i>
-                    YouTube
-                </a>
+                </div>
 
 
-                <a
-                    href="https://music.apple.com/mx/artist/garx1z/1896411973"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-apple"></i>
-                    Apple Music
-                </a>
+                <div class="links-grid">
 
 
-                <a
-                    href="https://soundcloud.com/garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-soundcloud"></i>
-                    SoundCloud
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-spotify"></i>
+
+                        <span>
+                            Spotify
+                        </span>
+
+                    </a>
 
 
-                <a
-                    href="https://instagram.com/garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-instagram"></i>
-                    Instagram
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://www.youtube.com/@Garx1z"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                        <span>
+                            YouTube
+                        </span>
+
+                    </a>
 
 
-                <a
-                    href="https://facebook.com/Garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fab fa-facebook"></i>
-                    Facebook
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://www.instagram.com/garx1z"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                        <span>
+                            Instagram
+                        </span>
+
+                    </a>
 
 
-                <a
-                    href="https://genius.com/artists/Garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fas fa-align-left"></i>
-                    Genius
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://soundcloud.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-soundcloud"></i>
+
+                        <span>
+                            SoundCloud
+                        </span>
+
+                    </a>
 
 
-                <a
-                    href="https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fas fa-database"></i>
-                    MusicBrainz
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-solid fa-music"></i>
+
+                        <span>
+                            MusicBrainz
+                        </span>
+
+                    </a>
 
 
-                <a
-                    href="https://linktr.ee/Garx1z"
-                    target="_blank"
-                    rel="noopener"
-                    class="platform-link"
-                >
-                    <i class="fas fa-link"></i>
-                    Linktree
-                </a>
+                    <a
+                        class="platform-link"
+                        href="https://linktr.ee/Garx1z"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
+                        <i class="fa-solid fa-link"></i>
+
+                        <span>
+                            Linktree
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        class="platform-link"
+                        href="#"
+                        onclick="alert('Genius profile coming soon.'); return false;"
+                    >
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span>
+                            Genius
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        class="platform-link"
+                        href="#store"
+                    >
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <span>
+                            Garx1z Store
+                        </span>
+
+                    </a>
+
+
+                </div>
 
             </div>
 
         </section>
 
 
-
-        <!-- =====================================================
-             FOOTER
-        ====================================================== -->
-
-        <footer>
-
-            <p>
-                © 2026
-                <strong>Garx1z</strong>.
-                All rights reserved.
-            </p>
-
-            <p style="margin-top: 6px;">
-                Independent artist & music producer.
-            </p>
-
-            <p
-                style="
-                    margin-top: 8px;
-                    font-size: 0.72rem;
-                    color: #5f668a;
-                "
-            >
-                x1z RECORDS • Garx1z Studio
-            </p>
-
-        </footer>
-
-
     </main>
 
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+
+            <div>
+
+                <div class="footer-brand">
+                    <span>Garx1z</span>
+                </div>
+
+                <p class="footer-text">
+                    Artist • Music Producer
+                </p>
+
+            </div>
+
+
+            <p class="footer-text">
+                © <span id="year"></span> Garx1z. All rights reserved.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Spotify"
+                >
+                    <i class="fa-brands fa-spotify"></i>
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@Garx1z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                >
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/garx1z"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        // Current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Smooth navigation
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+            link.addEventListener("click", function(event) {
+
+                const targetId = this.getAttribute("href");
+
+                if (
+                    targetId &&
+                    targetId !== "#" &&
+                    document.querySelector(targetId)
+                ) {
+
+                    event.preventDefault();
+
+                    document
+                        .querySelector(targetId)
+                        .scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                }
+
+            });
+
+        });
+
+    </script>
+
 </body>
-  </html>
+    </html>
