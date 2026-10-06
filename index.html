@@ -13,7 +13,7 @@
     <meta property="og:description" content="Official website of Garx1z. Listen to latest releases, explore the 2026 merch drop, and connect.">
     <meta property="og:image" content="perfil.jpg">
 
-    <!-- Fonts & FontAwesome CDN (Corregido) -->
+    <!-- Fonts & FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +51,54 @@
             line-height: 1.6;
             padding: 20px 15px;
             min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
         }
 
+        /* --- EFECTOS Y LUCES DE FONDO --- */
+        .bg-effects {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.35;
+            animation: floatOrb 10s infinite alternate ease-in-out;
+        }
+
+        .orb-1 {
+            width: 350px;
+            height: 350px;
+            background: var(--cyan-accent);
+            top: -50px;
+            left: -50px;
+        }
+
+        .orb-2 {
+            width: 450px;
+            height: 450px;
+            background: var(--purple-accent);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+            100% { transform: translate(-30px, 80px) scale(0.95); }
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
         .container {
             max-width: 850px;
             margin: 30px auto;
@@ -333,6 +379,12 @@
 </head>
 <body>
 
+    <!-- Capa de Luces Neón en Fondo -->
+    <div class="bg-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
     <div class="container">
         <!-- Header -->
         <header>
@@ -363,10 +415,10 @@
             </a>
         </div>
 
-        <!-- Reproductor Oficial -->
-        <h2 class="section-title"><i class="fas fa-play-circle"></i> Official Discography</h2>
+        <!-- Reproductor Oficial (Configurado con tu álbum específico) -->
+        <h2 class="section-title"><i class="fas fa-play-circle"></i> Featured Album</h2>
         <div class="music-grid">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1896411973?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1p6SNb0fNPH2edCtQXzy4k?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <!-- Galería de Fotos -->
@@ -380,7 +432,7 @@
         <!-- Enlaces Oficiales -->
         <h2 class="section-title"><i class="fas fa-globe"></i> Connect & Stream</h2>
         <div class="links-grid">
-            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+            <a href="https://open.spotify.com/intl-es/album/1p6SNb0fNPH2edCtQXzy4k" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
             <a href="https://music.apple.com/mx/artist/garx1z/1896411973" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
             <a href="https://soundcloud.com/garx1z" target="_blank"><i class="fab fa-soundcloud"></i> SoundCloud</a>
             <a href="https://garx1zstore.myshopify.com" target="_blank"><i class="fas fa-shopping-bag"></i> Official Store</a>
