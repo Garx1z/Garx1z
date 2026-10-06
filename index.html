@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garx1z | Official Website</title>
-    <meta name="description" content="Official website of Garx1z (Edward Garcia), an independent artist and music producer based in Lima, Perú. Heavy basslines, hypnotic vocals, and limitless sound.">
-    
-    <!-- Google Fonts & FontAwesome para íconos oficiales -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <meta name="description" content="Official website of Garx1z, independent artist, producer, and creator based in Lima, Perú. Heavy basslines, hypnotic sound, and official 2026 merch drops.">
+    <meta name="theme-color" content="#06070d">
+
+    <!-- Open Graph / Meta Tags para Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Garx1z | Official Website">
+    <meta property="og:description" content="Official website of Garx1z. Listen to latest releases, explore the 2026 merch drop, and connect.">
+    <meta property="og:image" content="perfil.jpg">
+
+    <!-- Fonts & FontAwesome CDN (Corregido) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #06070d; /* Fondo oscuro azulado profundo */
+            --bg-color: #06070d;
             --text-color: #ffffff;
-            --cyan-accent: #00f2ff; /* Celeste Neón */
-            --purple-accent: #9d4edd; /* Morado Eléctrico */
-            --card-bg: #111424; /* Bloques morados oscuros */
+            --cyan-accent: #00f2ff;
+            --purple-accent: #9d4edd;
+            --card-bg: rgba(17, 20, 36, 0.75);
             --gray-text: #a0a5c0;
             --border-color: #222947;
+            --glow-shadow: 0 0 25px rgba(0, 242, 255, 0.25);
         }
 
         * {
@@ -29,114 +37,205 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(157, 78, 221, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 242, 255, 0.1) 0%, transparent 40%);
             color: var(--text-color);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            padding: 20px;
+            padding: 20px 15px;
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 850px;
+            margin: 30px auto;
             text-align: center;
         }
 
-        /* Foto de perfil redonda */
+        /* Avatar con pulso neón */
+        .profile-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
             border: 3px solid var(--cyan-accent);
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
+            box-shadow: var(--glow-shadow);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+            border-color: var(--purple-accent);
         }
 
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 900;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             text-transform: uppercase;
             margin-bottom: 5px;
-            background: linear-gradient(45deg, var(--cyan-accent), var(--purple-accent));
+            background: linear-gradient(135deg, var(--cyan-accent), #ffffff 50%, var(--purple-accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
         }
 
-        header p {
+        header .tagline {
             color: var(--gray-text);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+            font-weight: 600;
         }
 
-        .bio-section {
+        /* Secciones con diseño Glassmorphism */
+        .glass-card {
             background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 30px;
             border-radius: 16px;
             margin-bottom: 40px;
             border: 1px solid var(--border-color);
             text-align: left;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 242, 255, 0.3);
         }
 
         .bio-section p {
             font-size: 1.05rem;
             color: #e2e4f0;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .bio-section p:last-child {
             margin-bottom: 0;
             font-weight: 700;
             color: var(--cyan-accent);
+            letter-spacing: 0.5px;
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-align: left;
             margin-bottom: 20px;
             border-left: 4px solid var(--purple-accent);
-            padding-left: 10px;
+            padding-left: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: var(--cyan-accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .music-grid {
+        /* Destacado de Merch / Drop 2026 */
+        .merch-banner {
+            background: linear-gradient(135deg, rgba(157, 78, 221, 0.2), rgba(0, 242, 255, 0.1));
+            border: 1px solid var(--cyan-accent);
+            border-radius: 16px;
+            padding: 25px;
             margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.15);
         }
 
-        /* Sección de galería de fotos personales */
+        .merch-info h3 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .merch-info p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .badge-2026 {
+            background: var(--purple-accent);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-shop {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cyan-accent);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-shop:hover {
+            background: #fff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Galería Responsiva */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
             gap: 15px;
             margin-bottom: 40px;
         }
 
         .gallery-item {
             width: 100%;
-            height: 220px;
+            height: 230px;
             object-fit: cover;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            background-color: var(--card-bg);
         }
 
         .gallery-item:hover {
-            transform: scale(1.03);
-            border-color: var(--purple-accent);
-            box-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--cyan-accent);
+            box-shadow: 0 8px 20px rgba(0, 242, 255, 0.25);
         }
 
-        /* Botones de redes corregidos */
+        /* Botones de Redes y Plataformas */
         .links-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
             gap: 15px;
             margin-bottom: 40px;
         }
@@ -145,16 +244,22 @@
             background: var(--card-bg);
             color: var(--text-color);
             text-decoration: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.9rem;
+            padding: 16px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+        }
+
+        .links-grid a i {
+            font-size: 1.2rem;
+            color: var(--cyan-accent);
+            transition: color 0.3s ease;
         }
 
         .links-grid a:hover {
@@ -162,35 +267,53 @@
             color: #000;
             border-color: transparent;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 242, 255, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 242, 255, 0.35);
         }
 
         .links-grid a:hover i {
             color: #000;
         }
 
+        /* Player Container */
+        .music-grid {
+            margin-bottom: 40px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
         footer {
             margin-top: 60px;
-            color: #4a4f73;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--gray-text);
             font-size: 0.85rem;
         }
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.5rem; }
+        footer strong {
+            color: #fff;
+        }
+
+        @media (max-width: 650px) {
+            header h1 { font-size: 2.8rem; }
+            .merch-banner { flex-direction: column; text-align: center; }
+            .btn-shop { width: 100%; justify-content: center; }
             .links-grid { grid-template-columns: 1fr 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 
-    <!-- METADATOS OPTIMIZADOS CON TU INFO REAL PARA GOOGLE -->
+    <!-- METADATOS OPTIMIZADOS SCHEMA.ORG -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "Garx1z",
-      "url": "https://github.io",
-      "description": "Garx1z (Edward Garcia) is an 18-year-old independent artist and producer based in Lima, Perú. Heavy basslines, hypnotic vocals, and limits-free Phonk and Pop sound.",
-      "genre": ["Phonk", "Pop", "Rap", "Hip Hop"],
+      "alternateName": "Edward Garcia",
+      "url": "https://garx1z.com",
+      "description": "Official website of Garx1z (Edward Garcia), an independent music producer and artist based in Lima, Perú.",
+      "genre": ["Phonk", "Rap", "Lofi", "Urban"],
       "homeLocation": {
         "@type": "Place",
         "name": "Lima, Perú"
@@ -203,9 +326,7 @@
         "https://genius.com/artists/Garx1z",
         "https://instagram.com/garx1z",
         "https://facebook.com/Garx1z",
-        "https://x.com/Garx1z",
-        "https://linktr.ee/Garx1z",
-        "https://bandsintown.com/a/15667636"
+        "https://garx1zstore.myshopify.com"
       ]
     }
     </script>
@@ -213,41 +334,69 @@
 <body>
 
     <div class="container">
+        <!-- Header -->
         <header>
-            <!-- Foto de perfil vinculada a GitHub -->
-            <img src="perfil.jpg" alt="Garx1z Perfil" class="profile-img" onerror="this.style.display='none'">
+            <div class="profile-container">
+                <img src="perfil.jpg" alt="Garx1z" class="profile-img" onerror="this.src='https://via.placeholder.com/160/111424/00f2ff?text=Garx1z'">
+            </div>
             <h1>Garx1z</h1>
-            <p>Artist & Producer</p>
+            <p class="tagline">Artist & Music Producer • Lima, PE</p>
         </header>
 
-        <!-- Biografía Oficial Ampliada -->
-        <section class="bio-section">
-            <p>Garx1z (Edward Garcia) is an 18-year-old independent artist and producer based in Lima, Perú. Driven by a lifelong passion for music, his project aims to break the mold and prove that any dream can become reality through persistence.</p>
-            <p>He draws influence from global legends as well as the raw energy of Pop, Bad Bunny, and Juice WRLD. He loves heavy basslines, hypnotic vocals, and music that makes you move and "feel colors." Inspired by the evolution of rap and the energy of Phonk, Garx1z creates without limits to show that dreams do come true.</p>
+        <!-- Biografía Oficial -->
+        <section class="glass-card bio-section">
+            <h2 class="section-title"><i class="fas fa-user-ninja"></i> About</h2>
+            <p>Garx1z (Edward Garcia) is an independent artist and music producer based in Lima, Perú. Driven by raw passion and an unrestricted vision, his project blends heavy basslines, hypnotic vocal chops, and dark atmospheric textures across Phonk, Rap, and Lofi soundscapes.</p>
+            <p>Representing a new era of self-made music production, Garx1z creates without boundaries — turning raw energy into sound that moves fast and leaves a permanent mark.</p>
             <p>Hear the difference!</p>
         </section>
 
-        <!-- Música oficial embebida -->
-        <h2 class="section-title">Listen Now</h2>
+        <!-- Drop Destacado de Merch Shopify -->
+        <div class="merch-banner">
+            <div class="merch-info">
+                <span class="badge-2026">Limited Edition Drop</span>
+                <h3>Official 'QR' Heavy Hoodie</h3>
+                <p>Inaugural 2026 streetwear drop. Cotton Heritage M2580 blank.</p>
+            </div>
+            <a href="https://garx1zstore.myshopify.com" target="_blank" class="btn-shop">
+                <i class="fas fa-shopping-bag"></i> Shop Drop
+            </a>
+        </div>
+
+        <!-- Reproductor Oficial -->
+        <h2 class="section-title"><i class="fas fa-play-circle"></i> Official Discography</h2>
         <div class="music-grid">
-            <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1896411973?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
-        <!-- Apartado de Fotos Personales -->
-        <h2 class="section-title">Gallery</h2>
+        <!-- Galería de Fotos -->
+        <h2 class="section-title"><i class="fas fa-camera"></i> Gallery</h2>
         <div class="gallery-grid">
-            <img src="foto1.jpg" alt="Garx1z Press Shot" class="gallery-item" onerror="this.src='https://placeholder.com'">
-            <img src="foto2.jpg" alt="Garx1z Studio" class="gallery-item" onerror="this.src='https://placeholder.com'">
-            <img src="foto3.jpg" alt="Garx1z Live" class="gallery-item" onerror="this.src='https://placeholder.com'">
+            <img src="foto1.jpg" alt="Garx1z Studio Session" class="gallery-item" onerror="this.src='https://via.placeholder.com/400x300/111424/9d4edd?text=Garx1z+Press+1'">
+            <img src="foto2.jpg" alt="Garx1z Live Performance" class="gallery-item" onerror="this.src='https://via.placeholder.com/400x300/111424/00f2ff?text=Garx1z+Press+2'">
+            <img src="foto3.jpg" alt="Garx1z Artwork" class="gallery-item" onerror="this.src='https://via.placeholder.com/400x300/111424/222947?text=Garx1z+Press+3'">
         </div>
 
-        <!-- Enlaces a Plataformas y Redes Corregidos -->
-        <h2 class="section-title">Connect & Stream</h2>
+        <!-- Enlaces Oficiales -->
+        <h2 class="section-title"><i class="fas fa-globe"></i> Connect & Stream</h2>
         <div class="links-grid">
             <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
             <a href="https://music.apple.com/mx/artist/garx1z/1896411973" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
             <a href="https://soundcloud.com/garx1z" target="_blank"><i class="fab fa-soundcloud"></i> SoundCloud</a>
             <a href="https://garx1zstore.myshopify.com" target="_blank"><i class="fas fa-shopping-bag"></i> Official Store</a>
-            <a href="https://linktr.ee/Garx1z" target="_blank"><i class="fas fa-link"></i> Linktree</a>
+            <a href="https://genius.com/artists/Garx1z" target="_blank"><i class="fas fa-align-left"></i> Genius Lyrics</a>
+            <a href="https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba" target="_blank"><i class="fas fa-database"></i> MusicBrainz</a>
             <a href="https://instagram.com/garx1z" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
             <a href="https://facebook.com/Garx1z" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://linktr.ee/Garx1z" target="_blank"><i class="fas fa-link"></i> Linktree</a>
+        </div>
+
+        <!-- Footer Oficial -->
+        <footer>
+            <p>&copy; 2026 <strong>Garx1z</strong>. All rights reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.75rem; color: #5f668a;">Powered by <strong>x1z RECORDS</strong> &amp; <strong>Garx1z Studio</strong></p>
+        </footer>
+    </div>
+
+</body>
+</html>
