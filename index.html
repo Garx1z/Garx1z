@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garx1z | Official Website</title>
+    <meta name="description" content="Official website of Garx1z, an independent artist and music producer based in Lima, Perú. Heavy basslines, hypnotic vocals, and limitless sound.">
+    
+    <!-- Google Fonts & FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent-color: #ff0055; /* Color neón vibrante estilo Phonk/Pop */
+            --card-bg: #121212;
+            --gray-text: #b3b3b3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .bio-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border: 1px solid #222;
+            text-align: left;
+        }
+
+        .bio-section p {
+            font-size: 1.05rem;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+        }
+
+        .bio-section p:last-child {
+            margin-bottom: 0;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-align: left;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .music-grid {
+            margin-bottom: 40px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .links-grid a {
+            background: var(--card-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid #222;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .links-grid a:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsivo para pantallas pequeñas */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5rem; }
+            .links-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+
+    <!-- METADATOS AVANZADOS (SCHEMA.ORG) PARA EL PANEL DE CONOCIMIENTO DE GOOGLE -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Garx1z",
+      "url": "https://github.io",
+      "description": "Garx1z is an 18-year-old independent artist and producer based in Lima, Perú. Inspired by the evolution of rap and the energy of Phonk.",
+      "genre": ["Phonk", "Pop", "Rap", "Hip Hop"],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Lima, Perú"
+      },
+      "sameAs": [
+        "https://spotify.com",
+        "https://apple.com",
+        "https://soundcloud.com",
+        "https://musicbrainz.org",
+        "https://genius.com",
+        "https://instagram.com",
+        "https://facebook.com",
+        "https://twitter.com",
+        "https://linktr.ee",
+        "https://bandsintown.com"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Garx1z</h1>
+            <p>Artist & Producer</p>
+        </header>
+
+        <!-- Biografía Oficial -->
+        <section class="bio-section">
+            <p>Garx1z is an independent artist and producer based in Lima, Perú. Driven by a lifelong passion for music, his project aims to break the mold and prove that any dream can become reality through persistence.</p>
+            <p>He draws influence from global legends as well as the raw energy of Pop. He loves heavy basslines, hypnotic vocals, and music that makes you move and "feel colors." Inspired by the evolution of rap and the energy of Phonk, Garx1z creates without limits to show that dreams do come true.</p>
+            <p>Hear the difference!</p>
+        </section>
+
+        <!-- Música Embebida de Spotify (Cambia este ID por el de tu canción/álbum preferido si quieres) -->
+        <h2 class="section-title">Listen Now</h2>
+        <div class="music-grid">
+            <iframe style="border-radius:12px" src="https://spotify.com" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <!-- Enlaces a Plataformas y Redes -->
+        <h2 class="section-title">Connect & Stream</h2>
+        <div class="links-grid">
+            <a href="https://spotify.com" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+            <a href="https://apple.com" target="_blank"><i class="fab fa-apple"></i> Apple Music</a>
+            <a href="https://soundcloud.com" target="_blank"><i class="fab fa-soundcloud"></i> SoundCloud</a>
+            <a href="https://myshopify.com" target="_blank"><i class="fas fa-shopping-bag"></i> Official Store</a>
+            <a href="https://linktr.ee" target="_blank"><i class="fas fa-link"></i> Linktree</a>
+            <a href="https://instagram.com?igsh=aHA0OHBqeGFuZTVw" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://x.com" target="_blank"><i class="fab fa-x-twitter"></i> X / Twitter</a>
+            <a href="https://genius.com" target="_blank"><i class="fas fa-music"></i> Genius</a>
+            <a href="https://bandsintown.com" target="_blank"><i class="fas fa-calendar-alt"></i> Bandsintown</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Garx1z. All rights reserved. Powered by GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
