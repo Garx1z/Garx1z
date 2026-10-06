@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta name="google-site-verification" content="bPH07iNdoAIl7KG9bMCJCDdgHg--_7Mx1c04b0peFJo" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Garx1z — Official Website</title>
+
+    <meta name="description"
+        content="Official website of Garx1z — independent artist, music producer, game developer and founder of x1z RECORDS.">
+
+    <meta name="theme-color" content="#06070d">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Garx1z — Official Website">
+    <meta property="og:description"
+        content="Official website, music, creative projects and store of Garx1z.">
+    <meta property="og:image" content="perfil.jpg">
+    <meta property="og:url" content="https://garx1z.com">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        /* =========================================================
+           ROOT
+        ========================================================= */
+
+        :root {
+            --bg: #06070d;
+            --bg-soft: #0b0e18;
+
+            --card: rgba(15, 18, 32, 0.78);
+            --card-solid: #101321;
+
+            --cyan: #00f2ff;
+            --purple: #9d4edd;
+
+            --white: #ffffff;
+            --text: #e8eaf2;
+            --muted: #9298ad;
+
+            --border: rgba(255, 255, 255, 0.08);
+
+            --radius: 18px;
+
+            --shadow:
+                0 20px 50px rgba(0, 0, 0, 0.45);
+
+            --glow:
+                0 0 30px rgba(0, 242, 255, 0.18);
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(0, 242, 255, 0.08),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 90% 90%,
+                    rgba(157, 78, 221, 0.10),
+                    transparent 35%
+                ),
+                var(--bg);
+
+            color: var(--white);
+
+            font-family: "Inter", sans-serif;
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+
+        /* =========================================================
+           BACKGROUND EFFECTS
+        ========================================================= */
+
+        .background-effects {
+            position: fixed;
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+        .orb {
+            position: absolute;
+
+            border-radius: 50%;
+
+            filter: blur(100px);
+
+            opacity: 0.25;
+        }
+
+        .orb.one {
+            width: 350px;
+            height: 350px;
+
+            background: var(--cyan);
+
+            top: -120px;
+            left: -120px;
+        }
+
+        .orb.two {
+            width: 450px;
+            height: 450px;
+
+            background: var(--purple);
+
+            right: -180px;
+            bottom: -150px;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .navbar {
+            width: min(1100px, calc(100% - 30px));
+
+            margin: 20px auto 0;
+
+            padding: 14px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            background: rgba(8, 10, 18, 0.75);
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            backdrop-filter: blur(15px);
+
+            position: sticky;
+            top: 15px;
+
+            z-index: 100;
+        }
+
+        .brand {
+            text-decoration: none;
+
+            font-weight: 900;
+
+            font-size: 1.1rem;
+
+            letter-spacing: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--cyan),
+                    #fff,
+                    var(--purple)
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 0.85rem;
+
+            font-weight: 600;
+
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+
+
+        /* =========================================================
+           MAIN
+        ========================================================= */
+
+        .container {
+            width: min(1050px, calc(100% - 30px));
+
+            margin: 0 auto;
+
+            padding-bottom: 60px;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 620px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 80px 0 60px;
+        }
+
+        .profile-wrapper {
+            position: relative;
+
+            margin-bottom: 25px;
+        }
+
+        .profile-image {
+            width: 170px;
+            height: 170px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid var(--cyan);
+
+            box-shadow:
+                0 0 35px rgba(0, 242, 255, 0.25);
+
+            transition: 0.35s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.04);
+
+            border-color: var(--purple);
+
+            box-shadow:
+                0 0 40px rgba(157, 78, 221, 0.3);
+        }
+
+        .verified-badge {
+            position: absolute;
+
+            right: 3px;
+            bottom: 10px;
+
+            width: 34px;
+            height: 34px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: var(--cyan);
+
+            color: #000;
+
+            border: 4px solid var(--bg);
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 10vw, 6rem);
+
+            line-height: 0.95;
+
+            font-weight: 900;
+
+            letter-spacing: -4px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--cyan),
+                    #ffffff 50%,
+                    var(--purple)
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            margin-top: 18px;
+
+            color: var(--muted);
+
+            font-size: 1rem;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            font-weight: 600;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            margin: 25px auto 0;
+
+            color: var(--text);
+
+            font-size: 1.05rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 13px 22px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+        .button.primary {
+            background: var(--cyan);
+
+            color: #000;
+        }
+
+        .button.secondary {
+            border: 1px solid var(--border);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            color: var(--white);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+
+            box-shadow: var(--glow);
+        }
+
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+        .section {
+            margin-top: 70px;
+        }
+
+        .section-heading {
+            margin-bottom: 25px;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 6px;
+        }
+
+        .section-heading h2 {
+            font-size: 2rem;
+
+            font-weight: 800;
+
+            letter-spacing: -1px;
+        }
+
+        .section-heading p {
+            margin-top: 6px;
+
+            color: var(--muted);
+
+            max-width: 650px;
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+
+            gap: 22px;
+
+            align-items: start;
+        }
+
+        .card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            padding: 28px;
+
+            box-shadow: var(--shadow);
+
+            backdrop-filter: blur(14px);
+        }
+
+        .about-text p {
+            color: var(--text);
+
+            margin-bottom: 18px;
+
+            font-size: 0.98rem;
+        }
+
+        .about-text p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================================
+           ARTIST INFO
+        ========================================================= */
+
+        .artist-info h3 {
+            margin-bottom: 18px;
+
+            font-size: 1.1rem;
+        }
+
+        .info-list {
+            display: grid;
+
+            gap: 0;
+        }
+
+        .info-row {
+            display: grid;
+
+            grid-template-columns: 110px 1fr;
+
+            gap: 12px;
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--muted);
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+        }
+
+        .info-value {
+            color: var(--white);
+
+            font-size: 0.88rem;
+
+            text-align: right;
+        }
+
+        .info-value a {
+            color: var(--cyan);
+
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           MUSIC
+        ========================================================= */
+
+        .music-card {
+            overflow: hidden;
+
+            padding: 0;
+
+            border-radius: var(--radius);
+
+            background: #000;
+
+            border: 1px solid var(--border);
+
+            box-shadow: var(--shadow);
+        }
+
+        .music-card iframe {
+            display: block;
+
+            width: 100%;
+
+            border: 0;
+        }
+
+
+        /* =========================================================
+           STORE
+        ========================================================= */
+
+        .store-card {
+            display: grid;
+
+            grid-template-columns: 1fr auto;
+
+            gap: 30px;
+
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(157, 78, 221, 0.18),
+                    rgba(0, 242, 255, 0.08)
+                );
+
+            border: 1px solid rgba(0, 242, 255, 0.25);
+        }
+
+        .store-badge {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            padding: 5px 10px;
+
+            border-radius: 6px;
+
+            background: var(--purple);
+
+            font-size: 0.7rem;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .store-card h3 {
+            font-size: 1.5rem;
+
+            margin-bottom: 8px;
+        }
+
+        .store-card p {
+            color: var(--muted);
+
+            max-width: 600px;
+        }
+
+
+        /* =========================================================
+           CREATIVE PROJECTS
+        ========================================================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .project-card {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 220px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: flex-end;
+
+            padding: 25px;
+
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(17, 20, 36, 0.95),
+                    rgba(10, 12, 22, 0.95)
+                );
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(0, 242, 255, 0.35);
+
+            box-shadow: var(--glow);
+        }
+
+        .project-icon {
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            font-size: 2rem;
+
+            color: var(--cyan);
+
+            opacity: 0.8;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+
+            margin-bottom: 7px;
+        }
+
+        .project-card p {
+            color: var(--muted);
+
+            font-size: 0.9rem;
+        }
+
+
+        /* =========================================================
+           SOCIAL LINKS
+        ========================================================= */
+
+        .social-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 12px;
+        }
+
+        .social-link {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 15px;
+
+            border-radius: 11px;
+
+            background: rgba(255, 255, 255, 0.035);
+
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+
+            font-weight: 600;
+
+            font-size: 0.88rem;
+
+            transition: 0.25s ease;
+        }
+
+        .social-link i {
+            color: var(--cyan);
+
+            font-size: 1.1rem;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--cyan);
+
+            background: rgba(0, 242, 255, 0.06);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            margin-top: 90px;
+
+            padding: 25px 0;
+
+            text-align: center;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 0.8rem;
+        }
+
+        footer strong {
+            color: var(--white);
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                position: static;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .store-card {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .store-card .button {
+                width: 100%;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(100% - 22px, 1050px);
+            }
+
+            .hero {
+                min-height: 560px;
+
+                padding-top: 55px;
+            }
+
+            .profile-image {
+                width: 145px;
+                height: 145px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-subtitle {
+                font-size: 0.75rem;
+
+                letter-spacing: 2px;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+            }
+
+            .hero-buttons {
+                width: 100%;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .card {
+                padding: 21px;
+            }
+
+            .section {
+                margin-top: 55px;
+            }
+
+            .section-heading h2 {
+                font-size: 1.7rem;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-row {
+                grid-template-columns: 1fr;
+
+                gap: 3px;
+            }
+
+            .info-value {
+                text-align: left;
+            }
+
+        }
+
+    </style>
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+    ========================================================= -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+
+        "name": "Edward Josue Garcia Alcas",
+
+        "alternateName": [
+            "Garx1z",
+            "Edward Garcia"
+        ],
+
+        "url": "https://garx1z.com",
+
+        "image": "https://garx1z.com/perfil.jpg",
+
+        "birthDate": "2008-09-18",
+
+        "birthPlace": {
+            "@type": "Place",
+            "name": "Coro, Falcón, Venezuela"
+        },
+
+        "jobTitle": [
+            "Artist",
+            "Music Producer",
+            "Game Developer"
+        ],
+
+        "founder": {
+            "@type": "Organization",
+            "name": "x1z RECORDS"
+        },
+
+        "sameAs": [
+            "https://open.spotify.com/intl-es/artist/5Oscnu6qr6X3K7zpEg9Faw",
+            "https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba",
+            "https://soundcloud.com/garx1z",
+            "https://www.youtube.com/@Garx1z",
+            "https://instagram.com/garx1z",
+            "https://facebook.com/Garx1z",
+            "https://genius.com/artists/Garx1z"
+        ]
+    }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- Background -->
+    <div class="background-effects">
+        <div class="orb one"></div>
+        <div class="orb two"></div>
+    </div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
+
+    <nav class="navbar">
+
+        <a href="#" class="brand">
+            GARX1Z
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#music">Music</a>
+            </li>
+
+            <li>
+                <a href="#store">Store</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#connect">Connect</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main class="container">
+
+
+        <!-- =====================================================
+             HERO
+        ===================================================== -->
+
+        <header class="hero">
+
+            <div class="profile-wrapper">
+
+                <img
+                    src="perfil.jpg"
+                    alt="Garx1z official artist portrait"
+                    class="profile-image"
+                    onerror="this.src='https://via.placeholder.com/170/111424/00f2ff?text=Garx1z'"
+                >
+
+                <div class="verified-badge">
+                    <i class="fas fa-check"></i>
+                </div>
+
+            </div>
+
+
+            <h1>Garx1z</h1>
+
+            <p class="hero-subtitle">
+                Artist · Producer · Game Developer
+            </p>
+
+            <p class="hero-description">
+                Independent artist and creative developer building music,
+                digital worlds and visual experiences through
+                <strong>x1z RECORDS</strong>.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#music"
+                    class="button primary"
+                >
+                    <i class="fas fa-play"></i>
+                    Listen to Music
+                </a>
+
+                <a
+                    href="https://garx1zstore.myshopify.com"
+                    target="_blank"
+                    rel="noopener"
+                    class="button secondary"
+                >
+                    <i class="fas fa-bag-shopping"></i>
+                    Official Store
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             ABOUT
+        ===================================================== -->
+
+        <section
+            id="about"
+            class="section"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    About the artist
+                </div>
+
+                <h2>Garx1z</h2>
+
+                <p>
+                    Music, technology and digital creativity in one project.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <!-- Biography -->
+
+                <article class="card about-text">
+
+                    <p>
+                        <strong>Edward Josue Garcia Alcas</strong>,
+                        professionally known as <strong>Garx1z</strong>,
+                        is an independent Venezuelan artist, music producer
+                        and game developer.
+                    </p>
+
+                    <p>
+                        Born in Coro, Falcón, Venezuela, Garx1z developed an
+                        early interest in computers, digital creation and
+                        music production.
+                    </p>
+
+                    <p>
+                        His musical work explores different forms of
+                        contemporary urban music, including rap, phonk,
+                        lo-fi and alternative sounds, while continuing to
+                        experiment with new styles and languages.
+                    </p>
+
+                    <p>
+                        Alongside music, Garx1z works on interactive and
+                        digital projects, including game development and
+                        online creative experiences.
+                    </p>
+
+                    <p>
+                        He also operates <strong>x1z RECORDS</strong>,
+                        an independent creative label created to maintain
+                        control over his music and future projects.
+                    </p>
+
+                </article>
+
+
+                <!-- Artist information -->
+
+                <aside class="card artist-info">
+
+                    <h3>Artist Profile</h3>
+
+                    <div class="info-list">
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Real name
+                            </span>
+
+                            <span class="info-value">
+                                Edward Josue Garcia Alcas
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Born
+                            </span>
+
+                            <span class="info-value">
+                                September 18, 2008
+                                <br>
+                                <small>
+                                    Coro, Falcón, Venezuela
+                                </small>
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Age
+                            </span>
+
+                            <span
+                                class="info-value"
+                                id="artist-age"
+                            >
+                                —
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Nationality
+                            </span>
+
+                            <span class="info-value">
+                                Venezuelan
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Occupation
+                            </span>
+
+                            <span class="info-value">
+                                Artist · Producer · Developer
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Active
+                            </span>
+
+                            <span class="info-value">
+                                2025 — Present
+                            </span>
+                        </div>
+
+
+                        <div class="info-row">
+                            <span class="info-label">
+                                Label
+                            </span>
+
+                            <span class="info-value">
+                                x1z RECORDS
+                            </span>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MUSIC
+        ===================================================== -->
+
+        <section
+            id="music"
+            class="section"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Official music
+                </div>
+
+                <h2>Listen to Garx1z</h2>
+
+                <p>
+                    Explore selected releases and music from the official
+                    Garx1z catalog.
+                </p>
+
+            </div>
+
+
+            <div class="music-card">
+
+                <iframe
+                    src="https://open.spotify.com/embed/album/1p6SNb0fNPH2edCtQXzy4k?utm_source=generator&theme=0"
+                    height="352"
+                    allow="
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        fullscreen;
+                        picture-in-picture
+                    "
+                    loading="lazy"
+                    title="Garx1z on Spotify"
+                >
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             STORE
+        ===================================================== -->
+
+        <section
+            id="store"
+            class="section"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Official merchandise
+                </div>
+
+                <h2>Garx1z Store</h2>
+
+            </div>
+
+
+            <div class="card store-card">
+
+                <div>
+
+                    <span class="store-badge">
+                        2026 Drop
+                    </span>
+
+                    <h3>
+                        Official Garx1z Merchandise
+                    </h3>
+
+                    <p>
+                        Clothing, limited releases and future merchandise
+                        inspired by the Garx1z universe.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://garx1zstore.myshopify.com"
+                    target="_blank"
+                    rel="noopener"
+                    class="button primary"
+                >
+                    <i class="fas fa-bag-shopping"></i>
+                    Visit Store
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CREATIVE PROJECTS
+        ===================================================== -->
+
+        <section
+            id="projects"
+            class="section"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Beyond music
+                </div>
+
+                <h2>Creative Projects</h2>
+
+                <p>
+                    Digital projects developed alongside Garx1z's music career.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="project-card">
+
+                    <i class="fas fa-gamepad project-icon"></i>
+
+                    <h3>
+                        CHAOS RAIN
+                    </h3>
+
+                    <p>
+                        An interactive game project developed for Roblox.
+                    </p>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <i class="fas fa-server project-icon"></i>
+
+                    <h3>
+                        DenimSeals RolePlay
+                    </h3>
+
+                    <p>
+                        A GTA San Andreas Multiplayer roleplay project
+                        connected to the early Garx1z creative universe.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONNECT
+        ===================================================== -->
+
+        <section
+            id="connect"
+            class="section"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    Official platforms
+                </div>
+
+                <h2>Connect & Stream</h2>
+
+                <p>
+                    Follow Garx1z and discover the official music and projects.
+                </p>
+
+            </div>
+
+
+            <div class="social-grid">
+
+
+                <a
+                    href="https://open.spotify.com/artist/5Oscnu6qr6X3K7zpEg9Faw"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-spotify"></i>
+                    Spotify
+                </a>
+
+
+                <a
+                    href="https://www.youtube.com/@Garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </a>
+
+
+                <a
+                    href="https://soundcloud.com/garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-soundcloud"></i>
+                    SoundCloud
+                </a>
+
+
+                <a
+                    href="https://music.apple.com/mx/artist/garx1z/1896411973"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-apple"></i>
+                    Apple Music
+                </a>
+
+
+                <a
+                    href="https://instagram.com/garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+
+
+                <a
+                    href="https://facebook.com/Garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fab fa-facebook"></i>
+                    Facebook
+                </a>
+
+
+                <a
+                    href="https://musicbrainz.org/artist/e5de9b79-7e75-4a48-ab2b-5ebc73b2d5ba"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fas fa-database"></i>
+                    MusicBrainz
+                </a>
+
+
+                <a
+                    href="https://genius.com/artists/Garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fas fa-align-left"></i>
+                    Genius
+                </a>
+
+
+                <a
+                    href="https://linktr.ee/Garx1z"
+                    target="_blank"
+                    rel="noopener"
+                    class="social-link"
+                >
+                    <i class="fas fa-link"></i>
+                    Linktree
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FOOTER
+        ===================================================== -->
+
+        <footer>
+
+            <p>
+                © <span id="current-year"></span>
+                <strong>Garx1z</strong>.
+                All rights reserved.
+            </p>
+
+            <p>
+                Independent artist & creative project.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =========================
+           Calculate age
+        ========================= */
+
+        function calculateAge(year, month, day) {
+
+            const today = new Date();
+
+            let age = today.getFullYear() - year;
+
+            const birthdayThisYear = new Date(
+                today.getFullYear(),
+                month - 1,
+                day
+            );
+
+            if (today < birthdayThisYear) {
+                age--;
+            }
+
+            return age;
+        }
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const ageElement =
+                    document.getElementById("artist-age");
+
+                const yearElement =
+                    document.getElementById("current-year");
+
+
+                if (ageElement) {
+
+                    ageElement.textContent =
+                        calculateAge(
+                            2008,
+                            9,
+                            18
+                        ) + " years";
+
+                }
+
+
+                if (yearElement) {
+
+                    yearElement.textContent =
+                        new Date().getFullYear();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+  </html>
